@@ -14,7 +14,7 @@ def basic_entangle_demo():
 
     sim = Aer.get_backend('aer_simulator')
     tqc = transpile(qc, sim)
-    result = sim.run(tqc).result()   # ✅ no execute()
+    result = sim.run(tqc).result()   
     state = result.get_statevector()
 
     print("Statevector:", state)
